@@ -9,6 +9,7 @@ public class PyrollCalculator {
 
     }
 
+
     static void userInput(Scanner inputScanner) {
         System.out.println("Please Enter Your Name: ");
         String Input = inputScanner.nextLine();
