@@ -15,16 +15,19 @@ public class PyrollCalculator {
         String Input = inputScanner.nextLine();
 
         System.out.println("Hello " + Input + ",Please Provide How many Hours you've Worked: ");
-        int numberOfHours = inputScanner.nextInt();
+        Input= inputScanner.nextLine();
+        double numberOfHours = Double.parseDouble(Input);
+
 
 
         System.out.println("And What is Your Base Salary in USD: ");
-        int baseSalary = inputScanner.nextInt();
-        calculateAndDisplay(Input, numberOfHours, baseSalary);
+        Input = inputScanner.nextLine();
+        double baseSalary = Double.parseDouble(Input);
+        calculate(Input, numberOfHours, baseSalary);
 
     }
 
-    static void calculateAndDisplay(String Input, double numberOfHours, double baseSalary) {
+    static void calculate(String Input, double numberOfHours, double baseSalary) {
 
         double grossSalary = numberOfHours * baseSalary;
         double overtimeHours = numberOfHours - 40;
